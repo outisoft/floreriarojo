@@ -8,7 +8,7 @@
                 <!-- Single Catagory -->
                 {% for producto in productos %}
                 <div class="single-products-catagory clearfix">
-                    <a href="#">
+                    <a href="{% url 'ventas:product'%}">
                         {% if producto.imagen %}
                         <img src="{{ producto.imagen.url }}" alt="">
                         {% endif %}
