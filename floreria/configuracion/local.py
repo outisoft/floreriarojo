@@ -20,4 +20,3 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # ruta en donde quedan almacenados las imagenes
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
