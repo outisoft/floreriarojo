@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+        <!-- Product Catagories Area Start -->
+        <div class="products-catagories-area clearfix">
+            <div class="amado-pro-catagory clearfix">
+
+                <!-- Single Catagory -->
+                {% for producto in productos %}
+                <div class="single-products-catagory clearfix">
+                    <a href="#">
+                        {% if producto.imagen %}
+                        <img src="{{ producto.imagen.url }}" alt="">
+                        {% endif %}
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <div class="line"></div>
+                            <p>${{ producto.precio }} MXN</p>
+                            <h4>{{ producto.nombre }}</h4>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <!-- Product Catagories Area End -->
+    <!-- ##### Main Content Wrapper End ##### -->
+
+  {% endblock %}

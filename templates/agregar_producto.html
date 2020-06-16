@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="cart-table-area section-padding-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="checkout_details_area mt-50 clearfix">
+
+                            <div class="cart-title">
+                                <h2>Agregar Nuevo Producto</h2>
+                            </div>
+                            <form id="form_creacion" action="{% url 'producto:agregar_producto' %}" method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                              <div class="modal-body">
+                              {{ form.as_p }}
+                              </div>
+                              <div class="modal-footer">
+                                <!--button class="btn btn-danger" type="button" onclick="cerrar_modal_creacion();">Cancelar</button-->
+                                <button class="btn btn-primary amado-btn mb-15" type="submit">Confirmar</button>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
